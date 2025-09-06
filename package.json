@@ -1,6 +1,8 @@
 {
   "scripts": {
-    "start": "vite"
+    "dev": "vite",
+    "build": "vite build",
+    "start": "vite preview"
   },
   "dependencies": {
     "@tailwindcss/cli": "^4.1.13",
