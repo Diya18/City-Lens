@@ -22,7 +22,7 @@
             }
         }
 
-        .animate-glow {
+        .animate-glow { 
             animation: glow 2s ease-in-out infinite;
         }
     </style>
@@ -116,108 +116,281 @@
             </h1>
         </div>
     </body>
-    <!-- Popular Destinations Section -->
+     
+
+<!-- ✅ Popular Destinations Section -->
 <section class="py-16 px-4 sm:px-8 bg-gray-50">
   <h2 class="text-3xl sm:text-4xl font-bold text-center mb-4">Popular Destinations ✈️</h2>
-  <p class="text-center text-gray-600 mb-12">Explore some of the most loved travel spots around the world</p>
+  <p class="text-center text-gray-600 mb-12">Discover iconic spots and their local flavors</p>
 
   <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
-    <!-- Card 1 -->
-    <div class="destination-card group relative overflow-hidden rounded-2xl shadow-lg bg-white cursor-pointer transform transition duration-500 hover:scale-105">
+    <!-- Destination Cards -->
+    <div onclick="showCityInfo('paris')" class="destination-card group relative overflow-hidden rounded-2xl shadow-lg bg-white cursor-pointer transform transition duration-500 hover:scale-105">
       <img src="paris.jpg" alt="Paris" class="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110">
       <div class="p-4">
-        <h3 class="font-bold text-lg mb-1">Paris</h3> 
+        <h3 class="font-bold text-lg mb-1">Paris</h3>
         <p class="text-gray-600 text-sm">City of Lights and Romance</p>
       </div>
-      <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition duration-500 flex items-center justify-center text-white font-semibold text-lg">
-        Explore
-      </div> 
     </div>
 
-    <!-- Card 2 -->
-    <div class="destination-card group relative overflow-hidden rounded-2xl shadow-lg bg-white cursor-pointer transform transition duration-500 hover:scale-105">
+    <div onclick="showCityInfo('maldives')" class="destination-card group relative overflow-hidden rounded-2xl shadow-lg bg-white cursor-pointer transform transition duration-500 hover:scale-105">
       <img src="maldives.jpg" alt="Maldives" class="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110">
       <div class="p-4">
         <h3 class="font-bold text-lg mb-1">Maldives</h3>
         <p class="text-gray-600 text-sm">Tropical Paradise with Turquoise Waters</p>
       </div>
-      <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition duration-500 flex items-center justify-center text-white font-semibold text-lg">
-        Explore
-      </div>
     </div>
 
-    <!-- Card 3 -->
-    <div class="destination-card group relative overflow-hidden rounded-2xl shadow-lg bg-white cursor-pointer transform transition duration-500 hover:scale-105">
+    <div onclick="showCityInfo('switzerland')" class="destination-card group relative overflow-hidden rounded-2xl shadow-lg bg-white cursor-pointer transform transition duration-500 hover:scale-105">
       <img src="switzerland.jpg" alt="Switzerland" class="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110">
       <div class="p-4">
         <h3 class="font-bold text-lg mb-1">Switzerland</h3>
         <p class="text-gray-600 text-sm">Snowy Alps & Scenic Landscapes</p>
       </div>
-      <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition duration-500 flex items-center justify-center text-white font-semibold text-lg">
-        Explore
-      </div>
     </div>
 
-    <!-- Card 4 -->
-    <div class="destination-card group relative overflow-hidden rounded-2xl shadow-lg bg-white cursor-pointer transform transition duration-500 hover:scale-105">
+    <div onclick="showCityInfo('bali')" class="destination-card group relative overflow-hidden rounded-2xl shadow-lg bg-white cursor-pointer transform transition duration-500 hover:scale-105">
       <img src="bali.jpg" alt="Bali" class="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110">
       <div class="p-4">
         <h3 class="font-bold text-lg mb-1">Bali</h3>
         <p class="text-gray-600 text-sm">Island of Beautiful Beaches & Culture</p>
       </div>
-      <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition duration-500 flex items-center justify-center text-white font-semibold text-lg">
-        Explore 
+    </div>
+
+    <!-- Indian Destinations -->
+    <div onclick="showCityInfo('jaipur')" class="destination-card group relative overflow-hidden rounded-2xl shadow-lg bg-white cursor-pointer transform transition duration-500 hover:scale-105">
+      <img src="jaipur.jpg" alt="Jaipur" class="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110">
+      <div class="p-4">
+        <h3 class="font-bold text-lg mb-1">Jaipur</h3>
+        <p class="text-gray-600 text-sm">The Pink City of Royal Heritage</p>
+      </div>
+    </div>
+
+    <div onclick="showCityInfo('goa')" class="destination-card group relative overflow-hidden rounded-2xl shadow-lg bg-white cursor-pointer transform transition duration-500 hover:scale-105">
+      <img src="goa.jpg" alt="Goa" class="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110">
+      <div class="p-4">
+        <h3 class="font-bold text-lg mb-1">Goa</h3>
+        <p class="text-gray-600 text-sm">Sun, Sand & Serenity</p>
+      </div>
+    </div>
+
+    <div onclick="showCityInfo('delhi')" class="destination-card group relative overflow-hidden rounded-2xl shadow-lg bg-white cursor-pointer transform transition duration-500 hover:scale-105">
+      <img src="delhi.jpg" alt="Delhi" class="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110">
+      <div class="p-4">
+        <h3 class="font-bold text-lg mb-1">Delhi</h3>
+        <p class="text-gray-600 text-sm">Heart of India, Rich in Culture</p>
+      </div>
+    </div>
+
+    <div onclick="showCityInfo('kerala')" class="destination-card group relative overflow-hidden rounded-2xl shadow-lg bg-white cursor-pointer transform transition duration-500 hover:scale-105">
+      <img src="kerala.jpg" alt="Kerala" class="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110">
+      <div class="p-4">
+        <h3 class="font-bold text-lg mb-1">Kerala</h3>
+        <p class="text-gray-600 text-sm">God’s Own Country</p>
+      </div>
+    </div>
+
+    <div onclick="showCityInfo('varanasi')" class="destination-card group relative overflow-hidden rounded-2xl shadow-lg bg-white cursor-pointer transform transition duration-500 hover:scale-105">
+      <img src="varanasi.jpg" alt="Varanasi" class="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110">
+      <div class="p-4">
+        <h3 class="font-bold text-lg mb-1">Varanasi</h3>
+        <p class="text-gray-600 text-sm">Spiritual Capital of India</p>
+      </div>
+    </div>
+
+    <div onclick="showCityInfo('manali')" class="destination-card group relative overflow-hidden rounded-2xl shadow-lg bg-white cursor-pointer transform transition duration-500 hover:scale-105">
+      <img src="manali.jpg" alt="Manali" class="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110">
+      <div class="p-4">
+        <h3 class="font-bold text-lg mb-1">Manali</h3>
+        <p class="text-gray-600 text-sm">Snowy Getaway in the Himalayas</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- Optional Scroll Animation (Fade Up) -->
+<!-- 🌆 City Info Section -->
+<section id="city-info" class="hidden py-16 bg-white text-center transition-opacity duration-700 ease-in-out opacity-0">
+  <h2 id="city-name" class="text-3xl font-bold mb-4"></h2>
+  <img id="city-image" src="" alt="City Image" class="w-full max-w-4xl mx-auto rounded-xl shadow-lg mb-8">
+  <div class="grid grid-cols-1 sm:grid-cols-2 gap-8 max-w-4xl mx-auto text-left">
+    <div>
+      <h3 class="text-xl font-semibold mb-3 text-sky-600">☕ Popular Cafés</h3>
+      <ul id="city-cafes" class="list-disc list-inside text-gray-700 space-y-2"></ul>
+    </div>
+    <div>
+      <h3 class="text-xl font-semibold mb-3 text-sky-600">🍽️ Famous Cuisines</h3>
+      <ul id="city-cuisines" class="list-disc list-inside text-gray-700 space-y-2"></ul>
+    </div>
+  </div>
+</section>
+
+<!-- 💡 Script -->
+<script>
+  const cityData = {
+    paris: {
+      name: "Paris, France 🇫🇷",
+      image: "paris.jpg",
+      cafes: ["Café de Flore", "Le Procope", "Angelina Paris"],
+      cuisines: ["Croissant", "Crêpe", "Ratatouille"]
+    },
+    maldives: {
+      name: "Maldives 🇲🇻",
+      image: "maldives.jpg",
+      cafes: ["Seagull Café House", "Belle Amie Bistro", "Sala Thai"],
+      cuisines: ["Mas Huni", "Fihunu Mas", "Garudhiya"]
+    },
+    switzerland: {
+      name: "Switzerland 🇨🇭",
+      image: "switzerland.jpg",
+      cafes: ["Babu’s Bakery", "Café Schober", "Mame Café"],
+      cuisines: ["Fondue", "Rösti", "Swiss Chocolate"]
+    },
+    bali: {
+      name: "Bali, Indonesia 🇮🇩",
+      image: "bali.jpg",
+      cafes: ["Revolver Espresso", "Crate Café", "The Shady Shack"],
+      cuisines: ["Nasi Goreng", "Satay", "Lawar"]
+    },
+    jaipur: {
+      name: "Jaipur, India 🏰",
+      image: "jaipur.jpg",
+      cafes: ["Tapri Central", "Anokhi Café", "Café Palladio"],
+      cuisines: ["Dal Baati Churma", "Ghevar", "Laal Maas"]
+    },
+    goa: {
+      name: "Goa, India 🏖️",
+      image: "goa.jpg",
+      cafes: ["Café Chocolatti", "Eva Café", "Artjuna"],
+      cuisines: ["Goan Fish Curry", "Bebinca", "Vindaloo"]
+    },
+    delhi: {
+      name: "Delhi, India 🕌",
+      image: "delhi.jpg",
+      cafes: ["Diggin", "Café Lota", "Rose Café"],
+      cuisines: ["Chole Bhature", "Kebabs", "Butter Chicken"]
+    },
+    kerala: {
+      name: "Kerala, India 🌿",
+      image: "kerala.jpg",
+      cafes: ["Kashi Art Café", "Loafers Corner", "Mocha Art Café"],
+      cuisines: ["Appam", "Puttu", "Kerala Sadya"]
+    },
+    varanasi: {
+      name: "Varanasi, India 🕉️",
+      image: "varanasi.jpg",
+      cafes: ["Open Hand Café", "Brown Bread Bakery", "Pizzeria Varanasi"],
+      cuisines: ["Kachori Sabzi", "Lassi", "Tamatar Chaat"]
+    },
+    manali: {
+      name: "Manali, India 🏔️",
+      image: "manali.jpg",
+      cafes: ["Café 1947", "Johnson’s Café", "Il Forno"],
+      cuisines: ["Siddu", "Trout (local specialty)", "Thukpa"]
+    }
+  };
+
+  function showCityInfo(cityKey) {
+    const city = cityData[cityKey];
+    if (!city) return;
+
+    const section = document.getElementById("city-info");
+    section.classList.remove("hidden");
+    section.classList.add("opacity-100");
+
+    document.getElementById("city-name").textContent = city.name;
+    document.getElementById("city-image").src = city.image;
+
+    document.getElementById("city-cafes").innerHTML = city.cafes.map(c => `<li>${c}</li>`).join("");
+    document.getElementById("city-cuisines").innerHTML = city.cuisines.map(f => `<li>${f}</li>`).join("");
+
+    section.scrollIntoView({ behavior: "smooth" });
+  }
+</script>
+  
+
+  
+
+                 
+      <!-- 🌍 Nearby Explorer Section -->
+<section class="py-16 px-4 sm:px-8 bg-gradient-to-br from-sky-50 to-blue-100 relative overflow-hidden">
+  <h2 class="text-3xl sm:text-4xl font-bold text-center mb-4 text-sky-800 animate-fade-up">Nearby Explorer 🗺️</h2>
+  <p class="text-center text-gray-600 mb-10 animate-fade-up">Discover cafés, restaurants, and attractions near you</p>
+
+  <!-- Map Container -->
+  <div class="relative w-full h-[480px] rounded-2xl overflow-hidden shadow-2xl border border-gray-200 bg-white max-w-6xl mx-auto">
+
+    <!-- Floating Controls -->
+    <div
+      class="absolute top-4 left-1/2 transform -translate-x-1/2 w-11/12 sm:w-2/3 bg-white/95 backdrop-blur-md shadow-md rounded-full flex flex-wrap items-center justify-center gap-2 px-4 py-2 z-10">
+      
+      <input id="placeInput" type="text" placeholder="📍 Enter city or area..."
+        class="flex-1 bg-transparent outline-none px-2 text-gray-700 text-sm sm:text-base min-w-[140px]">
+      
+      <button onclick="useMyLocation()"
+        class="px-3 py-1.5 bg-gray-200 text-gray-800 rounded-full hover:bg-gray-300 transition text-sm">
+        📍 Use My Location
+      </button>
+
+      <select id="categorySelect"
+        class="bg-white border border-gray-300 rounded-full px-3 py-1.5 text-gray-700 text-sm focus:ring-2 focus:ring-sky-400">
+        <option value="cafes">☕ Cafés</option>
+        <option value="restaurants">🍴 Restaurants</option>
+        <option value="hotels">🏨 Hotels</option>
+        <option value="attractions">🏖️ Attractions</option>
+        <option value="shopping">🛍️ Shopping</option>
+      </select>
+
+      <button onclick="searchNearby()"
+        class="px-5 py-1.5 bg-sky-500 text-white rounded-full hover:bg-sky-600 transition text-sm sm:text-base">
+        Search
+      </button>
+    </div>
+
+    <!-- Google Map -->
+    <iframe id="exploreMap"
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d315089.3610246426!2d2.052476!3d48.858844!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e671d877f2ed0d%3A0x40b82c3688c9460!2sParis!5e0!3m2!1sen!2sin!4v1704999999999!5m2!1sen!2sin"
+      width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"
+      class="transition-transform duration-700 ease-in-out group-hover:scale-105">
+    </iframe>
+  </div>
+</section>
+
+<script>
+  function searchNearby() {
+    const place = document.getElementById("placeInput").value.trim() || "India";
+    const category = document.getElementById("categorySelect").value;
+    const map = document.getElementById("exploreMap");
+
+    const encodedQuery = encodeURIComponent(`${category} near ${place}`);
+    map.src = `https://www.google.com/maps?q=${encodedQuery}&output=embed`;
+  }
+
+  function useMyLocation() {
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(
+        (position) => {
+          const { latitude, longitude } = position.coords;
+          const category = document.getElementById("categorySelect").value;
+          const map = document.getElementById("exploreMap");
+          map.src = `https://www.google.com/maps?q=${category}+near+${latitude},${longitude}&output=embed`;
+        },
+        () => alert("Unable to fetch your location 😞")
+      );
+    } else {
+      alert("Geolocation not supported by your browser.");
+    }
+  }
+</script>
+
 <style>
-@keyframes fadeUp {
-  0% { opacity: 0; transform: translateY(20px); }
-  100% { opacity: 1; transform: translateY(0); }
-}
-
-.destination-card {
-  animation: fadeUp 0.8s ease forwards;
-}
-.destination-card:nth-child(1) { animation-delay: 0.1s; }
-.destination-card:nth-child(2) { animation-delay: 0.2s; }
-.destination-card:nth-child(3) { animation-delay: 0.3s; }
-.destination-card:nth-child(4) { animation-delay: 0.4s; }
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .animate-fade-up { animation: fadeIn 0.8s ease-out both; }
 </style>
- 
-    
-    
-    
-
-<section class=" py-16 px-4 sm:px-8 bg-gradient-to-b from-sky-50 to-white">
-                <h2 class="text-3xl sm:text-4xl font-bold text-center mb-4">🌍 Explore on the Map</h2>
-                <p class="text-center text-gray-600 mb-10">Discover destinations and start planning your next adventure.
-                </p>
-
-                <div class="relative max-w-5xl mx-auto">
-                    <!-- Map Card -->
-                    <div class="relative w-full h-96 rounded-2xl overflow-hidden shadow-xl border border-gray-200">
-
-                        <!-- Floating Search Bar -->
-                        <div
-                            class="absolute top-4 left-1/2 transform -translate-x-1/2 w-11/12 sm:w-2/3 bg-white/95 backdrop-blur-md shadow-md rounded-full flex items-center px-4 py-2 z-10">
-                            <input type="text" placeholder="🔎 Search places..."
-                                class="flex-1 bg-transparent outline-none px-2 text-gray-700">
-                            <button class="px-4 py-1 bg-sky-500 text-white rounded-full hover:bg-sky-600 transition">
-                                Go
-                            </button>
-                        </div>
-
-                        <!-- Google Maps Embed -->
-                        <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d315089.3610246426!2d2.052476!3d48.858844!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e671d877f2ed0d%3A0x40b82c3688c9460!2sParis%2C%20France!5e0!3m2!1sen!2sin!4v1704999999999!5m2!1sen!2sin"
-                            width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
-                            referrerpolicy="no-referrer-when-downgrade" class="animate-[zoomIn_1s_ease-out]">
-                        </iframe>
-                    </div>
+   
 
                     <!-- Suggested Destinations -->
                     <div class="mt-8 grid grid-cols-1 sm:grid-cols-3 gap-6 text-center">
@@ -259,102 +432,11 @@
 
 
 
-    <!-- Booking Section -->
-    <section class="py-12 px-4 sm:px-8 bg-gray-100">
-        <h2 class="text-3xl sm:text-4xl font-bold text-center mb-6">Plan Your Trip</h2>
-        <p class="text-center text-gray-600 mb-10 sm:mb-12">
-            Wanna book a hotel, flight, or cab? Select an option below!
-        </p>
+    
+    
 
-        <!-- Booking Options -->
-        <div class="flex flex-col sm:flex-row justify-center gap-4 sm:gap-6 mb-10">
-            <button onclick="showForm('hotel')"
-                class="w-full sm:w-auto px-6 py-3 bg-sky-500 text-white rounded-full hover:bg-sky-600 transition shadow-lg">
-                Hotel
-            </button>
-            <button onclick="showForm('flight')"
-                class="w-full sm:w-auto px-6 py-3 bg-sky-500 text-white rounded-full hover:bg-sky-600 transition shadow-lg">
-                Flight
-            </button>
-            <button onclick="showForm('cab')"
-                class="w-full sm:w-auto px-6 py-3 bg-sky-500 text-white rounded-full hover:bg-sky-600 transition shadow-lg">
-                Cab
-            </button>
-        </div>
-
-        <!-- Dynamic Forms -->
-        <div id="booking-form" class="max-w-2xl mx-auto hidden bg-white p-6 sm:p-8 rounded-2xl shadow-lg">
-            <!-- Content injected by JS -->
-        </div>
-    </section>
-
-    <script>
-        function showForm(type) {
-            const formContainer = document.getElementById("booking-form");
-            let content = "";
-
-            if (type === "hotel") {
-                content = `
-        <h3 class="text-xl sm:text-2xl font-bold mb-4">Book a Hotel</h3>
-        <form class="space-y-3 sm:space-y-4">
-          <input type="text" placeholder="Destination" class="w-full border p-2 rounded">
-          <input type="date" class="w-full border p-2 rounded">
-          <input type="number" placeholder="Guests" class="w-full border p-2 rounded">
-          <button type="submit" class="w-full px-4 py-2 bg-sky-500 text-white rounded hover:bg-sky-600">Search</button>
-        </form>
-        <div class="mt-6 flex flex-col sm:flex-row justify-center sm:justify-around items-center gap-4">
-          <a href="https://www.makemytrip.com/hotels/" target="_blank">
-            <img src="https://imgak.mmtcdn.com/pwa_v3/pwa_hotel_assets/header/mmtLogoWhite.png" alt="MakeMyTrip" class="h-8 sm:h-10">
-          </a>
-          <a href="https://www.ixigo.com" target="_blank">
-            <img src="data:image/png;base64,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" alt="Ixigo" class="h-8 sm:h-10">
-          </a>
-        </div>
-      `;
-            }
-
-            if (type === "flight") {
-                content = `
-        <h3 class="text-xl sm:text-2xl font-bold mb-4">Book a Flight</h3>
-        <form class="space-y-3 sm:space-y-4">
-          <input type="text" placeholder="From" class="w-full border p-2 rounded">
-          <input type="text" placeholder="To" class="w-full border p-2 rounded">
-          <input type="date" class="w-full border p-2 rounded">
-          <button type="submit" class="w-full px-4 py-2 bg-sky-500 text-white rounded hover:bg-sky-600">Search</button>
-        </form>
-        <div class="mt-6 flex flex-col sm:flex-row justify-center sm:justify-around items-center gap-4"> 
-          <a href="https://www.ixigo.com" target="_blank">
-            <img src="data:image/png;base64,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" alt="Ixigo" class="h-8 sm:h-10">
-          </a>
-          <a href="https://www.makemytrip.com/flights/" target="_blank">
-            <img src="https://imgak.mmtcdn.com/pwa_v3/pwa_hotel_assets/header/mmtLogoWhite.png" alt="MakeMyTrip" class="h-8 sm:h-10">
-          </a>
-        </div>
-      `;
-            }
-
-            if (type === "cab") {
-                content = `
-        <h3 class="text-xl sm:text-2xl font-bold mb-4">Book a Cab</h3>
-        <form class="space-y-3 sm:space-y-4">
-          <input type="text" placeholder="Pickup Location" class="w-full border p-2 rounded">
-          <input type="text" placeholder="Drop Location" class="w-full border p-2 rounded">
-          <input type="time" class="w-full border p-2 rounded">
-          <button type="submit" class="w-full px-4 py-2 bg-sky-500 text-white rounded hover:bg-sky-600">Search</button>
-        </form>
-        <div class="mt-6 flex justify-center">
-          <a href="https://m.uber.com/" target="_blank">
-            <img src="https://download.logo.wine/logo/Uber/Uber-Logo.wine.png" alt="Uber" class="h-10 sm:h-12">
-          </a>
-        </div>
-      `;
-            }
-
-            formContainer.innerHTML = content;
-            formContainer.classList.remove("hidden");
-            formContainer.scrollIntoView({ behavior: "smooth" });
-        }
-    </script>
+        
+ 
 
 
 
@@ -362,24 +444,7 @@
 
 
 
-
-    <style>
-        @keyframes fadeUp {
-            0% {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-
-            100% {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .animate-fade-up {
-            animation: fadeUp 0.8s ease-out;
-        }
-    </style>
+    
 
 
 
@@ -472,6 +537,95 @@
             animation: slideInRight 1s ease-out forwards;
         }
     </style>
+    
+        
+  
+  <!-- 🚨 Travel Safety & Emergency Info Section -->
+<section class="py-16 px-4 sm:px-8 bg-gradient-to-br from-red-50 to-red-100">
+  <h2 class="text-3xl sm:text-4xl font-bold text-center mb-8 text-red-800">
+    Travel Safety Advisory
+  </h2>
+
+  <!-- Blacklisted / High-Risk Countries Table -->
+  <div class="max-w-4xl mx-auto mb-12">
+    <h3 class="text-2xl font-semibold text-red-700 mb-4">
+      Countries with Aviation Safety Concerns*
+    </h3>
+    <p class="text-gray-600 mb-4">
+      These are examples of countries whose airlines or aviation oversight have been identified as high-risk by major aviation authorities. Travelers should check the latest safety advisories before flying.
+    </p>
+    <table class="w-full border-collapse text-left text-gray-700">
+      <thead>
+        <tr class="bg-red-200">
+          <th class="px-4 py-2 border">Country</th>
+          <th class="px-4 py-2 border">Reason / Advisory</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="px-4 py-2 border">Afghanistan</td>
+          <td class="px-4 py-2 border">Airspace closed for civilian flights due to conflict.</td>
+        </tr>
+        <tr>
+          <td class="px-4 py-2 border">Sudan</td>
+          <td class="px-4 py-2 border">Ongoing conflict and unstable safety oversight.</td>
+        </tr>
+        <tr>
+          <td class="px-4 py-2 border">Tanzania</td>
+          <td class="px-4 py-2 border">Some carriers face restrictions due to regulatory issues.</td>
+        </tr>
+        <tr>
+          <td class="px-4 py-2 border">Suriname</td>
+          <td class="px-4 py-2 border">Listed for inadequate aviation safety oversight.</td>
+        </tr>
+        <tr>
+          <td class="px-4 py-2 border">Russia</td>
+          <td class="px-4 py-2 border">Restricted airspace due to ongoing conflict zones.</td>
+        </tr>
+      </tbody>
+    </table>
+    <p class="text-sm text-gray-500 mt-2">
+      * This is not a complete list; please check current advisories from your airline or government website.
+    </p>
+  </div>
+
+  <!-- India Emergency Contacts -->
+  <div class="max-w-4xl mx-auto">
+    <h3 class="text-2xl font-semibold text-red-700 mb-4">
+      Important Emergency Contacts in India
+    </h3>
+    <ul class="space-y-3 text-gray-700">
+      <li><strong>National Emergency Number:</strong> 112</li>
+      <li><strong>Tourist Helpline:</strong> 1363</li>
+      <li><strong>Police:</strong> 100</li>
+      <li><strong>Fire & Rescue:</strong> 101</li>
+      <li><strong>Ambulance:</strong> 102</li>
+      <li><strong>Indian Embassy (Abroad):</strong> Visit the official Ministry of External Affairs website for local contacts.</li>
+    </ul>
+    <p class="text-sm text-gray-500 mt-4">
+      Always verify the latest contact details before traveling.
+    </p>
+  </div>
+</section>
+
+<style>
+  /* Subtle fade-in for the section */
+  @keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  section {
+    animation: fadeInUp 0.7s ease-out both;
+  }
+
+  /* Table hover effects */
+  table tbody tr:hover {
+    background-color: rgba(255, 0, 0, 0.05);
+    transition: background-color 0.3s ease;
+  }
+</style>
+  
 
 
 
@@ -584,9 +738,8 @@
             animation: fadeIn 0.5s ease-out;
         }
     </style>
-
-
-
+    
+     
     <!-- Team Members -->
     <section class="py-16 px-8 bg-gray-50">
         <h2 class="text-4xl font-bold text-center mb-12">Meet Our Team</h2>
